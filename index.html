@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Smart Summarizer - Learn Faster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 PDF Smart Summarizer</h1>
+            <p>Upload any PDF and get an easy-to-understand summary in seconds</p>
+        </header>
+
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📄</div>
+            <p>Drag & drop your PDF here or <span class="browse-link">click to browse</span></p>
+            <input type="file" id="pdfInput" accept=".pdf" hidden>
+            <p class="file-info">Max file size: 10MB</p>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Processing your PDF... This may take a moment</p>
+        </div>
+
+        <div class="summary-container" id="summaryContainer" style="display: none;">
+            <div class="summary-header">
+                <h2>📖 Smart Summary</h2>
+                <button class="copy-btn" id="copyBtn">📋 Copy to Clipboard</button>
+            </div>
+            <div class="summary-stats" id="summaryStats"></div>
+            <div class="summary-content" id="summaryContent"></div>
+        </div>
+
+        <div class="tips">
+            <h3>💡 How it works:</h3>
+            <ul>
+                <li>Extracts key sentences using AI-like algorithms</li>
+                <li>Prioritizes important information (titles, bold text, first/last sentences)</li>
+                <li>Removes redundant content for faster learning</li>
+                <li>100% private - your PDF never leaves your browser</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
